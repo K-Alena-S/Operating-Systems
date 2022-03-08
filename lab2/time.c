@@ -30,7 +30,7 @@ main() {
     
     char* str_time;
     str_time = ctime(&now);
-    if (Ctime == NULL){
+    if (str_time == NULL){
         perror("Error - ctime");
         return CTIME_EXIT_ERROR;
     }
