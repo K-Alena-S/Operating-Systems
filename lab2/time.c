@@ -18,9 +18,9 @@ main() {
        
     int result_putenv = putenv ("TZ=America/Los_Angeles");
     if (result_putenv == ERROR){
-		perror("Error - putenv");
-		exit(PUTENV_EXIT_ERROR);
-	}
+	perror("Error - putenv");
+	exit(PUTENV_EXIT_ERROR);
+    }
     
     int all_time = time(&now);
     if (all_time == ERROR) {
