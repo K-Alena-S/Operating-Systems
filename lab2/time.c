@@ -3,12 +3,12 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define SUCCESS 0;
-#define ERROR -1;
-#define PUTENV_EXIT_ERROR 1;
-#define TIME_EXIT_ERROR 2;
-#define CTIME_EXIT_ERROR 3;
-#define LOCALTIME_EXIT_ERROR 4;
+#define SUCCESS 0
+#define ERROR -1
+#define PUTENV_EXIT_ERROR 1
+#define TIME_EXIT_ERROR 2
+#define CTIME_EXIT_ERROR 3
+#define LOCALTIME_EXIT_ERROR 4
 
 extern char *tzname[];
 
