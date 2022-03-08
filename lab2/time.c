@@ -19,27 +19,27 @@ main() {
     int result_putenv = putenv ("TZ=America/Los_Angeles");
     if (result_putenv == ERROR){
 	perror("Error - putenv");
-	exit(PUTENV_EXIT_ERROR);
+	return PUTENV_EXIT_ERROR;
     }
     
     int all_time = time(&now);
     if (all_time == ERROR) {
         perror("Error - time");
-        exit(TIME_EXIT_ERROR);
+        return TIME_EXIT_ERROR;
     }
     
     char* str_time;
     str_time = ctime(&now);
     if (Ctime == NULL){
         perror("Error - ctime");
-        exit(CTIME_EXIT_ERROR);
+        return CTIME_EXIT_ERROR;
     }
     printf("%s", str_time);
     
     sp = localtime(&now);
     if (sp == NULL){
         perror("Error - localtime");
-        exit(LOCALTIME_EXIT_ERROR);
+        return LOCALTIME_EXIT_ERROR;
     }
     
     printf("%d/%d/%02d %d:%02d %s\n",
