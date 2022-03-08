@@ -42,7 +42,7 @@ int main() {
         return LOCALTIME_EXIT_ERROR;
     }
     
-    printf("%d/%d/%02d %d:%02d %s\n",
+    printf("%d/%d/%02d %d:%02d %s\n",   //выводятся значения полей структуры tm
         sp->tm_mon + 1, 
         sp->tm_mday,
         sp->tm_year, 
