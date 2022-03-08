@@ -13,8 +13,8 @@
 extern char *tzname[];
 
 int main() {
-    time_t now;
-    struct tm *sp;
+    time_t now;         //определяем переменную now типа time_t  
+    struct tm *sp;      
        
     int result_putenv = putenv ("TZ=America/Los_Angeles");
     if (result_putenv == ERROR){
