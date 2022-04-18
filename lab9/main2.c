@@ -8,7 +8,7 @@
 #define ERROR_WAIT -1
 #define SUCCESS 0
 
-int main() {
+int main(int argc, char** argv) {
     pid_t pid, ret;
     pid = fork();
     
@@ -17,8 +17,8 @@ int main() {
         return ERROR;
     }
 
-    if (pid == CHILD) {  
-        execlp("cat", "cat", "text.txt", NULL);
+    if (pid == CHILD) { 
+        execlp("cat", "cat", argv[1], NULL);
         perror("execlp faild: ");
         return ERROR;
     }
