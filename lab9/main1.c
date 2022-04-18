@@ -6,7 +6,7 @@
 #define ERROR_FORK -1
 #define SUCCESS 0
 
-int main(int argc, char** argv) {
+int main() {
     pid_t pid = fork();
     
     if (pid == ERROR_FORK) {
