@@ -42,7 +42,7 @@ int main() {
     }
 
     print_id();
-    res =  open_file();
+    res =  open_file();  //ещё раз открываем файл
 
     return res;
 }
