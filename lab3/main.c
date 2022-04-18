@@ -18,7 +18,7 @@ int open_file() {
 
     printf("File opened\n");
     int res_close = fclose(file);
-    if (res_close == EOF){
+    if (res_close == EOF) {
         perror("Close - faild: ");
         return ERROR_CLOSING;
     }
@@ -26,16 +26,16 @@ int open_file() {
 }
 
 void print_id() {
-    printf("\n Real ID = %d\n", getuid());
-    printf("Effective ID = %d\n", geteuid());
+    printf("\n Real ID = %d\n", getuid());     //печать реального идентификатора пользователя
+    printf("Effective ID = %d\n", geteuid());  //печать эффективного идентификатора пользователя
 }
 
 int main() {
     print_id();
 
-    int res = open_file();
+    int res = open_file();  //открытие файла
 
-    int res_setuid = setuid(getuid());
+    int res_setuid = setuid(getuid());  //устанавливаем эффективный идентификатор равным реальному
     if (res_setuid == ERROR_SETUID) {
         perror("Setuid - faild: ");
         return ERROR_SET;
