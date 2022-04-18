@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
 
     if (pid == CHILD) {  //child
         execlp("cat", "cat", argv[1], NULL);
-        perror("execlp faild: ");
+        perror("execlp failed: ");
         return ERROR;
     }
 
